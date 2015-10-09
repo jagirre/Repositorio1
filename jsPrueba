@@ -1,0 +1,31 @@
+/*$(document).ready(inicio);
+	function inicio()
+		{$("#boton").click(obtener);}
+	function obtener()
+		{$("#parrafos p").each(resaltarParrafos);}
+	function resaltarParrafos()
+		{var x=$(this);
+			if(x.text().length<100)
+			{x.css("background-color","#ff0");}
+		}*/
+$(document).ready(inicio);
+var resultado="";
+	function inicio()
+	{
+		$("#boton").click(obtener);
+	}
+		function obtener()
+			{
+			$("#parrafos p").each(resaltarParrafos);
+			}
+
+		function resaltarParrafos(i)
+			{
+				var x=$(this);
+				if(x.text().length<100)
+					{
+					x.css("background-color","#ff0");
+					resultado+=" parrafo"+(i+1);
+					}
+				alert(resultado)
+			};
